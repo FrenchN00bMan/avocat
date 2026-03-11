@@ -1,5 +1,5 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const { requireAuth } = require('../middleware/auth');
 const { getAllArticles, getArticleBySlug, saveArticle, updateArticle, deleteArticle } = require('../utils/markdown');
 const { getTrackingSettings, saveTrackingSettings } = require('../utils/tracking');
