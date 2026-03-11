@@ -1,0 +1,100 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{% set breadcrumb = '<a href="/">Accueil</a> › Droit du travail employeurs' %}
+{% set title = 'Avocat en droit du travail<br>au service des <em>employeurs</em>' %}
+{% set lead = "Un partenaire juridique expert pour sécuriser vos décisions, prévenir les litiges et défendre vos intérêts devant toutes les juridictions sociales françaises." %}
+{% include "partials/page-hero.njk" %}
+
+<div class="page-content">
+  <div class="container">
+    <main class="content-body">
+      <h2>Le droit du travail, un enjeu stratégique pour l'entreprise</h2>
+      <p>Le droit social est l'un des domaines juridiques les plus techniques et les plus évolutifs du droit français. Chaque année, des centaines de nouvelles dispositions législatives, réglementaires et jurisprudentielles viennent modifier les obligations des employeurs. Une erreur de procédure, une clause de contrat mal rédigée ou une sanction mal motivée peut exposer l'entreprise à de lourdes condamnations prud'homales.</p>
+      <p>Maître Géraldine Audinet accompagne les dirigeants, DRH et responsables de PME et d'ETI du Puy-de-Dôme et de toute la France dans la gestion quotidienne de leurs relations sociales. Son objectif : anticiper les risques, sécuriser les décisions et, lorsque le conflit est inévitable, défendre efficacement vos intérêts.</p>
+
+      <div class="highlight-box">
+        <p><strong>Spécialisation exclusive :</strong> Contrairement à un cabinet généraliste, Maître Audinet consacre 100% de son activité au droit du travail et à la sécurité sociale. Cette concentration garantit une veille permanente et une expertise de haut niveau.</p>
+      </div>
+
+      <hr class="content-sep" id="conseil">
+      <h2>Le conseil juridique : prévenir plutôt que guérir</h2>
+      <p>L'intervention d'un avocat en amont d'une décision est toujours moins coûteuse qu'une procédure contentieuse. Le cabinet propose aux employeurs un accompagnement préventif sur l'ensemble du cycle de vie de la relation de travail :</p>
+      <ul>
+        <li><strong>À l'embauche :</strong> rédaction des contrats de travail (CDI, CDD, contrat de chantier), choix des clauses adaptées, classification, rémunération</li>
+        <li><strong>En cours d'exécution :</strong> modification du contrat, gestion des absences, application de la convention collective, politique salariale</li>
+        <li><strong>À la rupture :</strong> licenciement, rupture conventionnelle, transaction, départ en retraite</li>
+        <li><strong>En matière disciplinaire :</strong> avertissement, mise à pied, procédure de licenciement pour faute</li>
+        <li><strong>Sur les questions collectives :</strong> mise en place du CSE, élections professionnelles, négociation d'accords</li>
+      </ul>
+
+      <hr class="content-sep" id="irp">
+      <h2>Institutions représentatives du personnel (IRP) et CSE</h2>
+      <p>La mise en place et la gestion du Comité Social et Économique (CSE) constituent l'un des enjeux majeurs des entreprises d'au moins 11 salariés. Les obligations sont nombreuses et les erreurs peuvent avoir des conséquences lourdes.</p>
+      <p>Le cabinet accompagne les employeurs sur :</p>
+      <ul>
+        <li>La mise en place ou le renouvellement des instances représentatives du personnel</li>
+        <li>Le protocole préélectoral et la tenue des élections</li>
+        <li>La contestation des résultats électoraux devant le Tribunal Judiciaire</li>
+        <li>Le fonctionnement régulier du CSE (réunions, ordres du jour, consultations obligatoires)</li>
+        <li>La reconnaissance d'Unité Économique et Sociale (UES)</li>
+        <li>La gestion des mandats de représentants du personnel (protection, licenciement soumis à autorisation)</li>
+      </ul>
+
+      <hr class="content-sep" id="disciplinaire">
+      <h2>Droit disciplinaire : de l'avertissement au licenciement pour faute</h2>
+      <p>Toute sanction disciplinaire doit respecter une procédure stricte sous peine d'annulation et de condamnation de l'employeur. Le cabinet vous conseille sur :</p>
+      <ul>
+        <li>La qualification des fautes (faute simple, grave, lourde)</li>
+        <li>La rédaction des courriers de convocation, notifications et lettres de licenciement</li>
+        <li>Le respect des délais et des formes de la procédure disciplinaire</li>
+        <li>La défense en cas de contestation devant le Conseil de prud'hommes</li>
+      </ul>
+
+      <hr class="content-sep" id="conventions">
+      <h2>Conventions collectives et durée du travail</h2>
+      <p>L'application des conventions collectives soulève des questions complexes que les employeurs doivent maîtriser pour éviter des rappels de salaire ou des condamnations. Le cabinet intervient sur :</p>
+      <ul>
+        <li>Identification de la convention collective applicable et de ses contraintes</li>
+        <li>Classification des emplois et grilles salariales</li>
+        <li>Gestion du temps de travail : heures supplémentaires, contingent, récupération</li>
+        <li>Forfaits jours : validité, suivi, nullité éventuelle</li>
+        <li>Congés payés, RTT, congés spéciaux</li>
+        <li>Politique salariale et primes : cadre juridique et sécurisation</li>
+      </ul>
+
+      <hr class="content-sep" id="contentieux">
+      <h2>Représentation devant les juridictions sociales</h2>
+      <p>Lorsque le conflit est inévitable, le cabinet assure la défense des employeurs devant :</p>
+      <ul>
+        <li><strong>Conseils de prud'hommes</strong> (tous ressorts géographiques)</li>
+        <li><strong>Chambres sociales des Cours d'appel</strong></li>
+        <li><strong>Tribunaux administratifs</strong> (recours contre décisions de l'inspection du travail)</li>
+        <li><strong>Pôle Social du Tribunal Judiciaire</strong> (URSSAF, faute inexcusable, AT/MP)</li>
+      </ul>
+    </main>
+
+    {% set ctaTitle = "Besoin d'un conseil ?" %}
+    {% set ctaText = "Maître Audinet répond sous 24h. Premier entretien pour analyser votre situation." %}
+    {% set links = [
+      { href: "/licenciement-avocat-clermont-ferrand/", label: "Licenciement & rupture" },
+      { href: "/redaction-contrats-travail/", label: "Contrats de travail" },
+      { href: "/droit-securite-sociale-employeur/", label: "Sécurité sociale" }
+    ] %}
+    {% include "partials/sidebar.njk" %}
+  </div>
+</div>
+
+{% set title = "Questions fréquentes — Employeurs" %}
+{% set items = [
+  { question: "Quand dois-je consulter un avocat en droit du travail ?", answer: "Idéalement avant toute décision importante : licenciement, rupture conventionnelle, modification du contrat, sanction disciplinaire. L'avocat peut aussi intervenir en amont pour sécuriser vos pratiques et prévenir les risques prud'homaux." },
+  { question: "Quels sont les risques d'un licenciement mal conduit ?", answer: "Un licenciement sans cause réelle et sérieuse expose l'employeur à une indemnisation du salarié et au remboursement des allocations chômage. Des erreurs de procédure peuvent s'y ajouter." },
+  { question: "Le cabinet peut-il intervenir dans toute la France ?", answer: "Oui. Maître Audinet représente ses clients devant toutes les juridictions sociales françaises, quelle que soit leur localisation géographique." },
+  { question: "Comment sont fixés les honoraires ?", answer: "Les honoraires sont déterminés lors du premier entretien, en fonction de la nature et de la complexité du dossier. Une convention d'honoraires est systématiquement signée avant toute intervention." }
+] %}
+{% include "partials/faq.njk" %}
+
+{% set title = "Votre entreprise mérite un conseil juridique d'expert" %}
+{% set text = "Prenez contact pour un premier échange confidentiel sur votre situation." %}
+{% include "partials/cta-band.njk" %}
+{% endblock %}

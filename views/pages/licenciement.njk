@@ -1,0 +1,79 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{% set breadcrumb = '<a href="/">Accueil</a> › <a href="/avocat-droit-travail-employeurs/">Employeurs</a> › Licenciement' %}
+{% set title = 'Licenciement & rupture du contrat :<br><em>sécurisez chaque étape</em>' %}
+{% set lead = "Un licenciement mal conduit peut coûter plusieurs années de salaire. Maître Audinet accompagne les employeurs avant, pendant et après la procédure pour minimiser les risques contentieux." %}
+{% include "partials/page-hero.njk" %}
+
+<div class="page-content">
+  <div class="container">
+    <main class="content-body">
+      <h2>Pourquoi le licenciement est-il un acte juridique à risque ?</h2>
+      <p>Le licenciement est l'acte le plus encadré du droit du travail français. La lettre de licenciement fixe définitivement les motifs invoqués — aucun motif nouveau ne peut être ajouté ultérieurement. Une erreur dans la qualification des faits, une irrégularité dans la procédure ou une insuffisance dans la motivation expose l'employeur à une condamnation prud'homale pouvant atteindre, selon l'ancienneté du salarié, plus de vingt mois de salaire brut.</p>
+      <p>Faire appel à un avocat avant d'engager la procédure est la meilleure assurance contre ces risques.</p>
+
+      <hr class="content-sep">
+      <h2>Les différents types de licenciement</h2>
+      <h3>Licenciement pour motif personnel</h3>
+      <p>Il repose sur un motif inhérent à la personne du salarié : insuffisance professionnelle, faute disciplinaire ou comportement perturbateur. L'employeur doit respecter une procédure en plusieurs étapes :</p>
+      <div class="process-steps">
+        <div class="process-step"><div class="step-num">1</div><div class="step-body"><h4>Convocation à entretien préalable</h4><p>Envoi d'une lettre recommandée au moins 5 jours ouvrables avant l'entretien.</p></div></div>
+        <div class="process-step"><div class="step-num">2</div><div class="step-body"><h4>Entretien préalable</h4><p>Le salarié peut se faire assister. L'employeur expose les motifs envisagés.</p></div></div>
+        <div class="process-step"><div class="step-num">3</div><div class="step-body"><h4>Notification du licenciement</h4><p>Au plus tôt le lendemain de l'entretien, par lettre recommandée avec AR. La lettre doit être précise et motivée.</p></div></div>
+      </div>
+
+      <h3>Licenciement pour motif économique</h3>
+      <p>Il est fondé sur des difficultés économiques, des mutations technologiques, une réorganisation nécessaire à la compétitivité ou une cessation d'activité. Des obligations spécifiques s'appliquent selon la taille de l'entreprise et le nombre de salariés concernés.</p>
+
+      <h3>Licenciement pour inaptitude</h3>
+      <p>Lorsque le médecin du travail déclare un salarié inapte à son poste, l'employeur est tenu de rechercher un reclassement avant d'envisager le licenciement. L'origine professionnelle ou non professionnelle de l'inaptitude modifie substantiellement les obligations et indemnités.</p>
+
+      <hr class="content-sep">
+      <h2>La rupture conventionnelle</h2>
+      <p>La rupture conventionnelle est un mode de rupture amiable du CDI, négocié entre l'employeur et le salarié. Elle est soumise à une procédure obligatoire et ne peut pas être imposée à l'une ou l'autre des parties.</p>
+      <div class="highlight-box">
+        <p><strong>Attention :</strong> une rupture conventionnelle signée sous contrainte ou dans un contexte de harcèlement peut être annulée par les prud'hommes, avec des conséquences financières importantes pour l'employeur.</p>
+      </div>
+
+      <hr class="content-sep">
+      <h2>La transaction</h2>
+      <p>Après la rupture du contrat, une transaction peut être conclue pour mettre fin définitivement à tout litige. Pour être valable, elle doit être postérieure à la rupture, comporter des concessions réciproques et être rédigée avec précision.</p>
+
+      <hr class="content-sep">
+      <h2>Le cabinet intervient à chaque étape</h2>
+      <ul>
+        <li>Analyse de la situation avant toute décision</li>
+        <li>Rédaction de tous les courriers de procédure</li>
+        <li>Assistance lors de l'entretien préalable</li>
+        <li>Rédaction de la lettre de licenciement et sécurisation des motifs</li>
+        <li>Négociation de la rupture conventionnelle ou d'une transaction</li>
+        <li>Défense devant le Conseil de prud'hommes en cas de contestation</li>
+        <li>Appel devant la Chambre sociale de la Cour d'appel si nécessaire</li>
+      </ul>
+    </main>
+
+    {% set ctaTitle = "Votre licenciement en préparation ?" %}
+    {% set ctaText = "Consultez le cabinet avant d'engager la procédure. Un accompagnement dès le départ évite les erreurs coûteuses." %}
+    {% set notesTitle = "À savoir" %}
+    {% set notes = [
+      "Le délai de prescription pour contester un licenciement est de <strong>12 mois</strong> à compter de la notification.",
+      "Le barème Macron plafonne les indemnités prud'homales selon l'ancienneté du salarié."
+    ] %}
+    {% include "partials/sidebar.njk" %}
+  </div>
+</div>
+
+{% set title = "Questions fréquentes sur le licenciement" %}
+{% set items = [
+  { question: "Quel est le délai de prescription pour contester un licenciement ?", answer: "Le salarié dispose de 12 mois à compter de la notification du licenciement pour saisir le Conseil de prud'hommes en contestation." },
+  { question: "Qu'est-ce que le barème Macron ?", answer: "Depuis 2017, les indemnités prud'homales pour licenciement sans cause réelle et sérieuse sont encadrées par un barème fixant un plancher et un plafond selon l'ancienneté du salarié." },
+  { question: "Peut-on licencier un salarié protégé ?", answer: "Oui, mais la procédure est renforcée : le licenciement d'un représentant du personnel est soumis à l'autorisation préalable de l'Inspecteur du travail." },
+  { question: "Différence entre faute grave et faute lourde ?", answer: "La faute grave prive le salarié de ses indemnités de licenciement et de préavis. La faute lourde suppose une intention de nuire à l'employeur." }
+] %}
+{% include "partials/faq.njk" %}
+
+{% set title = "Anticipez les risques avant d'agir" %}
+{% set text = "Un seul entretien peut vous éviter une procédure prud'homale coûteuse." %}
+{% include "partials/cta-band.njk" %}
+{% endblock %}

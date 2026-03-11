@@ -1,0 +1,74 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{% set breadcrumb = '<a href="/">Accueil</a> › Contact' %}
+{% set title = 'Prenons contact' %}
+{% set lead = "Exposez-nous votre situation. Maître Audinet vous répond sous 24h pour convenir d'un premier entretien confidentiel." %}
+{% include "partials/page-hero.njk" %}
+
+<div class="container">
+  <div class="contact-layout">
+    <div class="contact-info-block">
+      <div class="section-label">Coordonnées</div>
+      <h2>Le cabinet</h2>
+      <p>Le cabinet est situé en centre-ville de Clermont-Ferrand. Maître Audinet reçoit sur rendez-vous en cabinet, peut se déplacer dans vos locaux pour les entreprises locales, et propose également des entretiens en visioconférence.</p>
+      <div class="contact-details">
+        <div class="contact-detail"><div class="detail-label">Adresse</div><div class="detail-body"><p>{{ site.address }}<br>{{ site.postalCode }} {{ site.city }}</p></div></div>
+        <div class="contact-detail"><div class="detail-label">Téléphone</div><div class="detail-body"><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></div></div>
+        <div class="contact-detail"><div class="detail-label">Email</div><div class="detail-body"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div></div>
+        <div class="contact-detail"><div class="detail-label">Délai</div><div class="detail-body"><p>Sous 24h en jours ouvrés</p></div></div>
+      </div>
+      <div class="section-label contact-section-label">Modalités de rendez-vous</div>
+      <div class="rdv-modes">
+        <div class="rdv-mode">Entretien au cabinet (Clermont-Ferrand)</div>
+        <div class="rdv-mode">Déplacement dans vos locaux (Puy-de-Dôme)</div>
+        <div class="rdv-mode">Visioconférence (toute la France)</div>
+        <div class="rdv-mode">Intervention devant toutes les juridictions françaises</div>
+      </div>
+    </div>
+    <div class="contact-form-block">
+      <h3>Formulaire de contact</h3>
+      <p>Décrivez brièvement votre situation. Ces informations nous permettent de préparer notre entretien.</p>
+      <div class="form-success" id="formSuccess">Votre message a été envoyé. Maître Audinet vous répondra dans les 24 heures.</div>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" required placeholder="Votre nom"></div>
+          <div class="form-group"><label for="prenom">Prénom</label><input type="text" id="prenom" placeholder="Votre prénom"></div>
+        </div>
+        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" required placeholder="votre@email.fr"></div>
+        <div class="form-group"><label for="telephone">Téléphone</label><input type="tel" id="telephone" placeholder="06 XX XX XX XX"></div>
+        <div class="form-group"><label for="entreprise">Entreprise / Société</label><input type="text" id="entreprise" placeholder="Nom de votre société"></div>
+        <div class="form-group">
+          <label for="sujet">Objet de votre demande *</label>
+          <select id="sujet" required>
+            <option value="">— Sélectionnez —</option>
+            <option value="licenciement">Licenciement / Rupture du contrat</option>
+            <option value="contrat">Contrat de travail</option>
+            <option value="disciplinaire">Procédure disciplinaire</option>
+            <option value="irp">IRP / CSE / Élections</option>
+            <option value="urssaf">URSSAF / Sécurité sociale</option>
+            <option value="contentieux">Contentieux prud'homal</option>
+            <option value="autre">Autre question</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="message">Décrivez brièvement votre situation</label><textarea id="message" placeholder="Quelques lignes sur le contexte de votre demande..."></textarea></div>
+        <p class="form-note">* Champs obligatoires. Ces informations sont strictement confidentielles et couvertes par le secret professionnel.</p>
+        <button type="submit" class="form-submit">Envoyer ma demande</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      contactForm.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    });
+  }
+</script>
+{% endblock %}

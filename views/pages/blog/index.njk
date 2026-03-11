@@ -1,0 +1,51 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{% set breadcrumb = '<a href="/">Accueil</a> › Actualités' %}
+{% set title = 'Actualités droit du travail<br><em>pour les employeurs</em>' %}
+{% set lead = "Analyses, décryptages et conseils pratiques sur l'actualité du droit social par Maître Audinet." %}
+{% include "partials/page-hero.njk" %}
+
+<div class="container">
+  <div class="blog-layout">
+    <main class="blog-articles">
+      {% for article in articles %}
+      <article class="article-card">
+        <div class="article-tag">{{ article.category }}</div>
+        <h2><a href="/actualites/{{ article.slug }}/">{{ article.title }}</a></h2>
+        <div class="article-meta">Publié le {{ article.date }} · Lecture {{ article.readingTime }}</div>
+        <p>{{ article.description }}</p>
+        <a href="/actualites/{{ article.slug }}/" class="article-read">Lire l'article →</a>
+      </article>
+      {% endfor %}
+    </main>
+    <aside class="blog-sidebar">
+      <div class="sidebar-card sidebar-cta blog-sidebar-cta">
+        <h4>Une question juridique ?</h4>
+        <p class="blog-sidebar-note">Maître Audinet répond sous 24h.</p>
+        <a href="/contact/" class="btn-primary">Prendre RDV</a>
+      </div>
+      <div class="blog-sidebar-card">
+        <h4>Thématiques</h4>
+        <ul>
+          <li><a href="/actualites/">Licenciement & rupture</a></li>
+          <li><a href="/actualites/">Contrats de travail</a></li>
+          <li><a href="/actualites/">CSE & IRP</a></li>
+          <li><a href="/actualites/">URSSAF & Sécurité sociale</a></li>
+          <li><a href="/actualites/">Droit disciplinaire</a></li>
+          <li><a href="/actualites/">Conventions collectives</a></li>
+        </ul>
+      </div>
+      <div class="blog-sidebar-card">
+        <h4>Nos services</h4>
+        <ul>
+          <li><a href="/avocat-droit-travail-employeurs/">Conseil employeurs</a></li>
+          <li><a href="/licenciement-avocat-clermont-ferrand/">Licenciement</a></li>
+          <li><a href="/redaction-contrats-travail/">Contrats</a></li>
+          <li><a href="/droit-securite-sociale-employeur/">Sécurité sociale</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+{% endblock %}

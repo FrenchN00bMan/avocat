@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ seo.title }}</title>
+  <meta name="description" content="{{ seo.description }}">
+  <link rel="canonical" href="{{ seo.canonical }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/public/css/main.css">
+  {% if tracking and tracking.ga4MeasurementId %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ tracking.ga4MeasurementId }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ tracking.ga4MeasurementId }}');
+  </script>
+  {% endif %}
+  {% if tracking and tracking.headScripts %}
+  {{ tracking.headScripts | safe }}
+  {% endif %}
+  {% if schemaJson %}
+  <script type="application/ld+json">{{ schemaJson | safe }}</script>
+  {% endif %}
+</head>
+<body>
+  {% if tracking and tracking.bodyStartScripts %}
+  {{ tracking.bodyStartScripts | safe }}
+  {% endif %}
+  {% include "partials/header.njk" %}
+  {% block content %}{% endblock %}
+  {% include "partials/footer.njk" %}
+  <script src="/public/js/main.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

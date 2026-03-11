@@ -1,0 +1,14 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Accueil</a> › Erreur</div>
+    <h1>Erreur {{ status }}</h1>
+    <p class="lead">{{ message }}</p>
+  </div>
+</section>
+<div class="container" style="padding:4rem 2rem 6rem;">
+  <a href="/" class="btn-primary">Retour à l'accueil</a>
+</div>
+{% endblock %}

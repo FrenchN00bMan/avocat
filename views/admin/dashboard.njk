@@ -1,0 +1,50 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Accueil</a> › Admin</div>
+    <h1>Dashboard articles</h1>
+    <p class="lead">Créer, modifier et publier les contenus du blog.</p>
+  </div>
+</section>
+<div class="container" style="padding:4rem 2rem 6rem;">
+  <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:2rem;">
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <a href="/admin/articles/new" class="btn-primary">Nouvel article</a>
+      <a href="/admin/tracking" class="btn-secondary">Tracking</a>
+    </div>
+    <form action="/admin/logout" method="post"><button type="submit" class="btn-secondary">Déconnexion</button></form>
+  </div>
+  <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+    <a href="/admin/dashboard" class="{{ filter == 'all' and 'btn-primary' or 'btn-secondary' }}">Tous ({{ totalCount }})</a>
+    <a href="/admin/dashboard?status=published" class="{{ filter == 'published' and 'btn-primary' or 'btn-secondary' }}">Publiés ({{ publishedCount }})</a>
+    <a href="/admin/dashboard?status=draft" class="{{ filter == 'draft' and 'btn-primary' or 'btn-secondary' }}">Brouillons ({{ draftCount }})</a>
+  </div>
+  <div class="blog-sidebar-card">
+    <h4>Articles{% if filter == 'published' %} publiés{% elif filter == 'draft' %} en brouillon{% endif %}</h4>
+    {% if articles.length %}
+    <ul>
+      {% for article in articles %}
+      <li style="display:flex; justify-content:space-between; gap:1rem; align-items:center;">
+        <span>
+          <span style="display:inline-block; min-width:88px; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:{{ article.published and 'var(--gold)' or 'var(--text-light)' }};">
+            {{ article.published and 'Publié' or 'Brouillon' }}
+          </span>
+          {{ article.date }} · {{ article.title }}
+        </span>
+        <span style="display:flex; gap:0.75rem;">
+          {% if article.published %}
+          <a href="/actualites/{{ article.slug }}/">Voir</a>
+          {% endif %}
+          <a href="/admin/articles/{{ article.slug }}/edit">Éditer</a>
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p style="margin:0; color:var(--text-mid);">Aucun article dans ce filtre.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

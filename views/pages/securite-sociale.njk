@@ -1,0 +1,68 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{% set breadcrumb = '<a href="/">Accueil</a> › <a href="/avocat-droit-travail-employeurs/">Employeurs</a> › Droit de la sécurité sociale' %}
+{% set title = 'Droit de la sécurité sociale :<br><em>défenseur des employeurs</em>' %}
+{% set lead = "Contrôle URSSAF, accidents du travail, maladies professionnelles, faute inexcusable — Maître Audinet vous accompagne dans toutes vos relations avec les organismes de sécurité sociale." %}
+{% include "partials/page-hero.njk" %}
+
+<div class="page-content">
+  <div class="container">
+    <main class="content-body">
+      <h2>Le droit de la sécurité sociale : un enjeu financier majeur pour l'entreprise</h2>
+      <p>Les relations entre les employeurs et les organismes de sécurité sociale sont sources de contentieux fréquents et potentiellement très coûteux. Un redressement URSSAF mal contesté, une qualification d'accident du travail non remise en cause ou une tarification AT/MP excessive peuvent peser lourdement sur les finances de l'entreprise.</p>
+      <p>Maître Audinet assiste les employeurs dans l'ensemble de ces procédures, en amont comme en contentieux.</p>
+
+      <hr class="content-sep">
+      <h2 id="urssaf">Contrôle URSSAF</h2>
+      <p>Le contrôle URSSAF peut déboucher sur un redressement de cotisations sociales potentiellement important. Les employeurs disposent de plusieurs voies de recours :</p>
+      <ul>
+        <li><strong>Observations suite au contrôle :</strong> le cabinet analyse le chef de redressement et prépare la réponse à l'inspecteur du recouvrement</li>
+        <li><strong>Commission de recours amiable (CRA) :</strong> recours préalable obligatoire avant toute action contentieuse</li>
+        <li><strong>Pôle Social du Tribunal Judiciaire :</strong> si la CRA n'aboutit pas, le cabinet assure la défense en contentieux</li>
+        <li><strong>Cour d'appel :</strong> en cas de décision défavorable en première instance</li>
+      </ul>
+      <div class="highlight-box">
+        <p><strong>Délai critique :</strong> la contestation d'un redressement URSSAF est soumise à des délais stricts. Il est essentiel de consulter un avocat dès réception de la mise en demeure.</p>
+      </div>
+
+      <hr class="content-sep">
+      <h2 id="atmp">Accidents du travail et maladies professionnelles (AT/MP)</h2>
+      <p>La reconnaissance d'un accident du travail ou d'une maladie professionnelle par la CPAM engage la responsabilité de l'employeur et peut avoir des conséquences importantes sur le taux de cotisation AT/MP.</p>
+      <h3>Instruction de la décision de la CPAM</h3>
+      <p>L'employeur peut contester la décision de prise en charge d'un accident du travail ou d'une maladie professionnelle par la CPAM, en particulier lorsque les conditions d'opposabilité n'ont pas été respectées.</p>
+      <h3>Contestation du taux d'incapacité permanente</h3>
+      <p>Le taux d'incapacité permanente fixé par la CPAM détermine directement les indemnisations dues et l'impact sur le taux de cotisation. Ce taux peut être contesté devant le Pôle Social du Tribunal Judiciaire.</p>
+      <h3>Faute inexcusable de l'employeur</h3>
+      <p>Lorsque la faute inexcusable de l'employeur est reconnue, les conséquences financières sont très lourdes : majoration de la rente versée à la victime, indemnisation de préjudices complémentaires.</p>
+
+      <hr class="content-sep">
+      <h2>Tarification des AT/MP</h2>
+      <p>Le taux de cotisation AT/MP de l'entreprise dépend de la fréquence et de la gravité des sinistres survenus dans l'établissement. Ce taux est fixé annuellement par la CARSAT et peut être contesté.</p>
+      <ul>
+        <li>L'analyse du compte employeur et de la tarification appliquée</li>
+        <li>La contestation du taux devant la CARSAT puis le Pôle Social du Tribunal Judiciaire</li>
+        <li>La mise en place de mesures de prévention permettant de réduire le taux à terme</li>
+      </ul>
+
+      <hr class="content-sep">
+      <h2>Juridictions compétentes</h2>
+      <p>Le cabinet représente les employeurs devant l'ensemble des juridictions compétentes en droit de la sécurité sociale :</p>
+      <ul>
+        <li><strong>Commission de Recours Amiable (CRA)</strong> — recours préalable obligatoire pour les litiges URSSAF</li>
+        <li><strong>Pôle Social du Tribunal Judiciaire</strong> — AT/MP, URSSAF, taux d'incapacité, faute inexcusable</li>
+        <li><strong>Cour d'appel</strong> — chambre sociale, appel des décisions du Pôle Social</li>
+        <li><strong>Tribunaux Administratifs</strong> — pour certains contentieux administratifs en matière de droit du travail</li>
+      </ul>
+    </main>
+
+    {% set ctaTitle = "Contrôle URSSAF en cours ?" %}
+    {% set ctaText = "Ne tardez pas — les délais de recours sont courts. Contactez le cabinet dès réception de la mise en demeure." %}
+    {% include "partials/sidebar.njk" %}
+  </div>
+</div>
+
+{% set title = "Un litige avec l'URSSAF ou la CPAM ?" %}
+{% set text = "Chaque délai manqué peut vous priver d'un recours. Agissez vite." %}
+{% include "partials/cta-band.njk" %}
+{% endblock %}

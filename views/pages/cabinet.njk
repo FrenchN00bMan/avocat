@@ -1,0 +1,61 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{% set breadcrumb = '<a href="/">Accueil</a> › Cabinet' %}
+{% set title = 'Le cabinet' %}
+{% set lead = "25 ans de pratique exclusive en droit du travail et sécurité sociale au service des entreprises de Clermont-Ferrand et de toute la France." %}
+{% include "partials/page-hero.njk" %}
+
+<div class="container">
+  <div class="cabinet-profile">
+    <div class="profile-photo-wrap">
+      <div class="profile-photo">
+        <img src="https://www.audinetavocat.fr/wp-content/uploads/2015/06/geraldine_audinet_carre-300x300.jpg" alt="Maître Géraldine Audinet, avocate au Barreau de Clermont-Ferrand" onerror="this.style.display='none'">
+        <div class="placeholder">Maître<br>Géraldine<br>Audinet</div>
+      </div>
+      <blockquote class="profile-quote">
+        « La connaissance approfondie du droit social ne suffit pas : il faut comprendre les réalités de l'entreprise pour conseiller efficacement. »
+      </blockquote>
+    </div>
+    <div class="profile-content">
+      <div class="section-label">Présentation</div>
+      <h1>Maître Géraldine Audinet</h1>
+      <div class="profile-title">Avocate au Barreau de Clermont-Ferrand · Spécialiste droit du travail & sécurité sociale</div>
+      <h2>Un parcours entièrement dédié au droit social</h2>
+      <p>Maître Géraldine Audinet exerce en qualité d'avocate depuis 1999, inscrite au Barreau de Clermont-Ferrand. Depuis ses débuts, elle a choisi de concentrer toute son activité sur le droit du travail et le droit de la sécurité sociale — une spécialisation exclusive qui lui confère une expertise technique approfondie et une veille permanente sur l'évolution de la législation et de la jurisprudence sociales.</p>
+      <p>En vingt-cinq ans de pratique, elle a accompagné des centaines d'entreprises, dirigeants et responsables RH, dans des dossiers allant de la simple rédaction de contrat à la défense dans des procédures complexes devant les Chambres sociales des Cours d'appel.</p>
+      <h2>Une approche orientée employeurs</h2>
+      <p>Maître Audinet a développé une expertise particulière dans l'accompagnement des employeurs — PME, ETI, associations — confrontés à la complexité du droit social français.</p>
+      <p>Son approche est résolument pragmatique : comprendre les contraintes de l'entreprise, identifier les risques réels et proposer des solutions adaptées, en privilégiant toujours la résolution amiable lorsqu'elle est possible.</p>
+      <h2>Domaines d'intervention</h2>
+      <ul>
+        <li>Droit du travail – conseil et contentieux pour employeurs</li>
+        <li>Licenciement, rupture conventionnelle, transaction</li>
+        <li>Contrats de travail et avenants</li>
+        <li>Droit disciplinaire</li>
+        <li>Institutions représentatives du personnel (CSE, élections)</li>
+        <li>Conventions collectives, durée du travail, politique salariale</li>
+        <li>Droit de la sécurité sociale : URSSAF, accidents du travail, maladies professionnelles</li>
+        <li>Contentieux devant toutes les juridictions sociales françaises</li>
+      </ul>
+      <h2>Nos valeurs</h2>
+      <div class="valeurs-grid">
+        <div class="valeur-item"><h4>Réactivité</h4><p>Le cabinet s'engage à répondre sous 24h à toute demande. En droit du travail, les délais peuvent être courts.</p></div>
+        <div class="valeur-item"><h4>Transparence</h4><p>Les honoraires sont définis dès le premier entretien et formalisés dans une convention signée avant toute intervention.</p></div>
+        <div class="valeur-item"><h4>Spécialisation</h4><p>100% de l'activité consacrée au droit social. Pas de généralisme, pas de dispersion — une expertise concentrée.</p></div>
+        <div class="valeur-item"><h4>Confidentialité</h4><p>Le secret professionnel est une obligation absolue. Toutes les informations transmises sont traitées avec la plus stricte confidentialité.</p></div>
+      </div>
+      <h2>Compétence nationale</h2>
+      <p>Bien qu'implantée à Clermont-Ferrand, Maître Audinet représente ses clients devant toutes les juridictions sociales françaises, sans restriction géographique.</p>
+      <div class="profile-actions">
+        <a href="/contact/" class="btn-primary">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% set title = "Prenez contact avec le cabinet" %}
+{% set text = "Premier entretien confidentiel pour évaluer votre situation." %}
+{% set buttonLabel = "Contacter le cabinet" %}
+{% include "partials/cta-band.njk" %}
+{% endblock %}

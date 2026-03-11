@@ -1,0 +1,37 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Accueil</a> › <a href="/admin/dashboard">Admin</a> › Tracking</div>
+    <h1>Tracking & tags</h1>
+    <p class="lead">Configurer Google Analytics 4 et ajouter des scripts de tracking au site.</p>
+  </div>
+</section>
+<div class="container" style="padding:4rem 2rem 6rem; max-width:980px;">
+  <form method="post" action="/admin/tracking" class="contact-form-block">
+    {% if saved %}
+    <p style="color:#355b3d; font-weight:600;">Configuration enregistrée.</p>
+    {% endif %}
+    <div class="form-group">
+      <label for="ga4MeasurementId">ID GA4</label>
+      <input id="ga4MeasurementId" name="ga4MeasurementId" type="text" placeholder="G-XXXXXXXXXX" value="{{ tracking.ga4MeasurementId }}">
+      <p class="form-note">Si renseigné, le script `gtag.js` GA4 sera injecté automatiquement dans le `head`.</p>
+    </div>
+    <div class="form-group">
+      <label for="headScripts">Scripts additionnels dans le head</label>
+      <textarea id="headScripts" name="headScripts" style="min-height:180px;" placeholder="<script>...</script>">{{ tracking.headScripts }}</textarea>
+      <p class="form-note">Pour Google Tag Manager head, pixels ou balises meta/scripts à charger dans le `head`.</p>
+    </div>
+    <div class="form-group">
+      <label for="bodyStartScripts">Scripts additionnels au début du body</label>
+      <textarea id="bodyStartScripts" name="bodyStartScripts" style="min-height:180px;" placeholder="<noscript>...</noscript>">{{ tracking.bodyStartScripts }}</textarea>
+      <p class="form-note">Pratique pour le bloc `noscript` de Google Tag Manager ou des tags à injecter juste après l'ouverture du `body`.</p>
+    </div>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <button type="submit" class="form-submit" style="width:auto; min-width:220px;">Enregistrer</button>
+      <a href="/admin/dashboard" class="btn-secondary">Retour dashboard</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

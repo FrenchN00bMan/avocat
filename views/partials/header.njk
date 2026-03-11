@@ -1,0 +1,20 @@
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <span class="logo-name">Maître G. Audinet</span>
+      <span class="logo-sub">Avocat · Droit du Travail</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="/avocat-droit-travail-employeurs/" class="{% if navKey == 'employeurs' %}active{% endif %}">Employeurs</a>
+      <a href="/licenciement-avocat-clermont-ferrand/" class="{% if navKey == 'licenciement' %}active{% endif %}">Licenciement</a>
+      <a href="/redaction-contrats-travail/" class="{% if navKey == 'contrats' %}active{% endif %}">Contrats</a>
+      <a href="/droit-securite-sociale-employeur/" class="{% if navKey == 'securite-sociale' %}active{% endif %}">Sécurité sociale</a>
+      <a href="/actualites/" class="{% if navKey == 'blog' %}active{% endif %}">Actualités</a>
+      <a href="/cabinet-audinet/" class="{% if navKey == 'cabinet' %}active{% endif %}">Cabinet</a>
+      <a href="/contact/" class="nav-cta {% if navKey == 'contact' %}active{% endif %}">Prendre RDV</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

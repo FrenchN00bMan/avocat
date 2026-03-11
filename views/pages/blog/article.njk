@@ -1,0 +1,26 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{% set breadcrumb = '<a href="/">Accueil</a> › <a href="/actualites/">Actualités</a> › ' ~ article.category %}
+{% set title = article.title %}
+{% set lead = article.description %}
+{% include "partials/page-hero.njk" %}
+
+<div class="page-content">
+  <div class="container">
+    <main class="content-body">
+      <div class="section-label">{{ article.category }} · {{ article.date }} · Lecture {{ article.readingTime }}</div>
+      {{ article.html | safe }}
+    </main>
+    {% set ctaTitle = "Besoin d'un conseil sur ce sujet ?" %}
+    {% set ctaText = "Le cabinet peut analyser votre situation et sécuriser votre décision." %}
+    {% set linksTitle = "À lire aussi" %}
+    {% set links = [
+      { href: "/actualites/", label: "Voir toutes les actualités" },
+      { href: "/avocat-droit-travail-employeurs/", label: "Accompagnement employeurs" },
+      { href: "/contact/", label: "Prendre contact" }
+    ] %}
+    {% include "partials/sidebar.njk" %}
+  </div>
+</div>
+{% endblock %}
